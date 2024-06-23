@@ -1,0 +1,35 @@
+{
+    "name": "cordova-plugin-vibrationplugin",
+    "version": "1.0.0",
+    "description": "An Android Cordova plugin that allows users to trigger device vibration patterns.",
+    "cordova": {
+      "id": "cordova-plugin-vibrationplugin",
+      "platforms": [
+        "android"
+      ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Wpcarmona/vibration-custom-cordova-plugin.git"
+    },
+    "keywords": [
+      "Vibration",
+      "Notification",
+      "Alert",
+      "ecosystem:cordova",
+      "cordova-android"
+    ],
+    "engines": [
+      {
+        "name": "cordova",
+        "version": ">=3.0.0"
+      }
+    ],
+    "author": "wcarmona",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/Wpcarmona/vibration-custom-cordova-plugin/issues"
+    },
+    "homepage": "https://github.com/Wpcarmona/vibration-custom-cordova-plugin.git"
+  }
+  

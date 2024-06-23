@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-vibrationplugin" version="1.0.0">
+    <name>VibrationPlugin</name>
+    <description>An Android Cordova plugin vibration.</description>
+    <license>MIT</license>
+    <keywords>cordova,android,vibration</keywords>
+    <repo>https://github.com/Wpcarmona/vibration-custom-cordova-plugin.git</repo>
+    <issue>https://github.com/Wpcarmona/vibration-custom-cordova-plugin/issues</issue>
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+    <js-module src="www/vibrationPlugin.js" name="vibrationPlugin">
+        <clobbers target="window.plugins.vibrationPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="VibrationPlugin">
+                <param name="android-package" value="com.wcarmona.cordova.plugin.VibrationPlugin"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/VibrationPlugin.java" target-dir="src/com/wcarmona/cordova/plugin" />
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.VIBRATE" />
+        </config-file>
+    </platform>
+</plugin>
