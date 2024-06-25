@@ -45,6 +45,12 @@ public class VibrationPlugin extends CordovaPlugin {
             case "info":
                 pattern = new long[]{0, 50, 50, 50};
                 break;
+            case "pulse":
+                pattern = new long[]{0, 100, 200, 100};
+                break;
+            case "short":
+                pattern = new long[]{0, 50};
+                break;
         }
 
         if (vibrator != null) {
