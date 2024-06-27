@@ -23,7 +23,8 @@ window.plugins.vibrationPlugin.vibrate('error', function() {
 
 ## Autor
 
-wcarmona
+### Android
+\* wcarmona 
 
 ## Versión
 
