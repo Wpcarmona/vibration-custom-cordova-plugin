@@ -15,7 +15,7 @@ public class VibrationPlugin extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) {
         try {
             if (action.equals("vibrate")) {
-                String vibrationType = args.getString(0);
+                char[] vibrationType = args.getString(0).toCharArray();
                 this.vibrate(vibrationType, callbackContext);
                 return true;
             } else {
@@ -28,11 +28,13 @@ public class VibrationPlugin extends CordovaPlugin {
         }
     }
 
-    private void vibrate(String vibrationType, CallbackContext callbackContext) {
+    private void vibrate(char[] vibrationType, CallbackContext callbackContext) {
         Vibrator vibrator = (Vibrator) cordova.getActivity().getSystemService(cordova.getActivity().VIBRATOR_SERVICE);
         long[] pattern = new long[0];
 
-        switch (vibrationType) {
+        String vibrationTypeString = new String(vibrationType);
+
+        switch (vibrationTypeString) {
             case "error":
                 pattern = new long[]{0, 100, 100, 100, 100, 100};
                 break;
@@ -60,3 +62,4 @@ public class VibrationPlugin extends CordovaPlugin {
         callbackContext.sendPluginResult(pluginResult);
     }
 }
+

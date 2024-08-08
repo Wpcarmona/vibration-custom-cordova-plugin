@@ -3,8 +3,8 @@ function VibrationPlugin() {}
 
 // Function to handle vibration
 VibrationPlugin.prototype.vibrate = function(vibrationType, successCallback, errorCallback) {
-    var options = [vibrationType];
-    cordova.exec(successCallback, errorCallback, 'VibrationPlugin', 'vibrate', options);
+    //var options = [vibrationType];
+    cordova.exec(successCallback, errorCallback, 'VibrationPlugin', 'vibrate', [vibrationType]);
 }
 
 // Installation constructor that binds VibrationPlugin to window
